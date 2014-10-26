@@ -1,6 +1,8 @@
 digraph test123 {
 //shape=diamond,color="blue"
 //cool
+
+//dafadf
 //cold
 x21  [label="x2", shape=box]
 x22  [label="x2", shape=box]
