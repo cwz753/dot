@@ -1,0 +1,75 @@
+digraph test123 {
+//shape=diamond,color="blue"
+x21  [label="x2", shape=box]
+x22  [label="x2", shape=box]
+x23  [label="x2", shape=box]
+x24  [label="x2", shape=box]
+x25  [label="x2", shape=box]
+x26  [label="x2", shape=box]
+
+x31  [label="x3", shape=box]
+x32  [label="x3", shape=box]
+x33  [label="x3", shape=box]
+x34  [label="x3", shape=box]
+x35  [label="x3", shape=box]
+x36  [label="x3", shape=box]
+	
+
+x41  [label="x4", shape=box]
+x42  [label="x4", shape=box]
+
+x61  [label="x6", shape=box]
+x62  [label="x6", shape=box]
+
+x51  [label="x5", shape=box]
+x52  [label="x5", shape=box]
+
+x71  [label="x7", shape=box]
+x72  [label="x7", shape=box]
+	
+	
+	x1->x21;
+	x1->x31;
+
+	x21->x41;
+	x21->x51;
+	x21->x32;
+
+	x41->x52;
+	x41->x33;
+	x51->x42;
+	x51->x34;
+
+	x32->"x4,x5,x6,x7 \n(4!=24 possible combinations)";
+
+	x52->x35;
+	x35->"x6,x7 \n(2! possible combinations)";
+
+	x33->"x5,x6,x7 \n(3!=6 possible combinations)";
+	x42->x36;	
+	x36->"x6,x7   \n (2! possible combinations)";
+	x34->"x4,x6,x7 \n(3! possible combinations)";
+
+
+
+	x31->x61;
+	x31->x71;
+	x31->x22;
+
+	x61->x23;
+	x61->x72;
+	x23->"x4,x5,x7 \n(3! possible combinations)";
+	x72->x25;
+	x25->"x4,x5 \n(2! possible combinations)";
+
+	x71->x24;
+	x71->x62;
+	x24->"x4,x5,x6 \n(3! possible combinations)";
+	x62->x26;
+	x26->"x4,x5      \n(2! possible combinations)";
+
+	x22->"x4,x5,x6,x7 \n(4! possible combinations)";
+
+
+
+}
